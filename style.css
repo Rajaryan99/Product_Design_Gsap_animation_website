@@ -154,6 +154,34 @@ body {
     height: 140%;
 }
 
+.mainMarq {
+    /* position: relative; */
+    /* z-index: 1; */
+    padding-top: 15vw;
+    width: 100%;
+    background-color: #000;
+}
+
+.marqee {
+    /* background-color: #d71111; */
+    color: #fff;
+    width: 100%;
+    padding: 40px 0;
+    border-block: 1px solid #888;
+    display: flex;
+
+}
+
+.marqee marquee {
+    font-size: 2.3rem;
+    font-weight: 900;
+    word-spacing: 150px;
+    text-transform: uppercase;
+    opacity: .7;
+    font-family: "General Sans Medium";
+
+}
+
 .about {
     width: 100%;
     background-color: #000;
