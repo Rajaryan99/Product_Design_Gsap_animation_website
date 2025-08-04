@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Design </title>
+    <link rel="stylesheet" href="loco.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/icon.jpg">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="main">
+    <div class="miniCircle"></div>
+    <div id="main">
         <!-- Hero section -->
         <div class="hero">
             <div class="nav">
@@ -19,14 +21,26 @@
                 <h4>MENU+</h4>
             </div>
             <div class="heading">
-                <h1>Product</h1>
-                <div class="blockText">
-                    <h1 id="des">Designer</h1>
-                    <h5>based on toronto</h5>
+                <div class="bounding">
+                    <h1 class="boundingele">Product</h1>
                 </div>
+
+                <div class="bounding">
+                    <div class="blockText">
+                        <h1 id="des" class="boundingele">Designer</h1>
+                        <div class="bounding">
+                            <h5 class="boundingele">based on toronto</h5>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="smallHeading">
-                    <h5>available for full time & Freelance</h5>
-                    <h5>Work from sep</h5>
+                    <div class="bounding">
+                        <h5 class="boundingele">available for full time & Freelance</h5>
+                    </div>
+                    <div class="bounding">
+                        <h5 class="boundingele">Work from sep</h5>
+                    </div>
                 </div>
                 <div class="heroFooter">
                     <a href="#">Previously worked at YML <i class="ri-arrow-right-up-line"></i> <br> code and theory</a>
@@ -94,8 +108,10 @@
         </div>
     </div>
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="app.js"></script>
 </body>
 
