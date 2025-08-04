@@ -25,17 +25,55 @@ function skweCircle() {
 
         circleMouseFollower(xScale, yScale);
         timer = setTimeout(function () {
-            document.querySelector('.miniCircle').style.transform = `translate(${det.clientX}px, ${det.clientY}px) scale(1, 1)`;
+            document.querySelector('.miniCircle').style.transform = `translate(${detail.clientX}px, ${detail.clientY}px) scale(1, 1)`;
 
         }, 100)
     });
 }
-
 skweCircle();
 
+// function Circle() {
+//     let xScale = 1;
+//     let yScale = 1;
+
+//     let Xpre = 0;
+//     let Ypre = 0;
+
+//   
+
+//         Xpre = del.clientX;
+//         Ypre = del.clientY;
+
+
+//     })
+// }
+
+
+
+
+
+
+document.querySelectorAll('.elem').forEach(function (elem) {
+    elem.addEventListener('mousemove', function () {
+        gsap.to(elem.querySelector("img"), {
+            opacity: 1,
+            ease: Power2.out,
+            duration: 0.3
+        });
+    });
+
+    // elem.addEventListener('mouseleave', function () {
+    //     gsap.to(image, {
+    //         opacity: 0,
+    //         duration: 0.3
+    //     });
+    // });
+});
+
+
 function circleMouseFollower(xScale, yScale) {
-    window.addEventListener("mousemove", function (det) {
-        document.querySelector('.miniCircle').style.transform = `translate(${det.clientX}px, ${det.clientY}px) scale(${xScale},${yScale})`;
+    window.addEventListener("mousemove", function (detail) {
+        document.querySelector('.miniCircle').style.transform = `translate(${detail.clientX}px, ${detail.clientY}px) scale(${xScale},${yScale})`;
     });
 }
 
