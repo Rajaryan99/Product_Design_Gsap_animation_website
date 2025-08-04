@@ -4,9 +4,38 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-function circleMouseFollower() {
+
+let timer;
+function skweCircle() {
+    clearTimeout(timer);
+    let xScale = 1;
+    let yScale = 1;
+
+    let xPrev = 0;
+    let yPrev = 0;
+
+    window.addEventListener("mousemove", function (dets) {
+        xScale = gsap.utils.clamp(.8, 1.2, dets.clientX - xPrev);
+        yScale = gsap.utils.clamp(.8, 1.2, dets.clientY - yPrev);
+
+        xPrev = dets.clientX;
+        yPrev = dets.clientY;
+
+
+
+        circleMouseFollower(xScale, yScale);
+        timer = setTimeout(function () {
+            document.querySelector('.miniCircle').style.transform = `translate(${det.clientX}px, ${det.clientY}px) scale(1, 1)`;
+
+        }, 100)
+    });
+}
+
+skweCircle();
+
+function circleMouseFollower(xScale, yScale) {
     window.addEventListener("mousemove", function (det) {
-        document.querySelector('.miniCircle').style.transform = `translate(${det.clientX}px, ${det.clientY}px)`;
+        document.querySelector('.miniCircle').style.transform = `translate(${det.clientX}px, ${det.clientY}px) scale(${xScale},${yScale})`;
     });
 }
 
