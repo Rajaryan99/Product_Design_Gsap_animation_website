@@ -21,13 +21,11 @@ function skweCircle() {
         xPrev = dets.clientX;
         yPrev = dets.clientY;
 
-
-
         circleMouseFollower(xScale, yScale);
-        timer = setTimeout(function () {
-            document.querySelector('.miniCircle').style.transform = `translate(${detail.clientX}px, ${detail.clientY}px) scale(1, 1)`;
+        // timer = setTimeout(function () {
+        //     document.querySelector('.miniCircle').style.transform = `translate(${detail.clientX}px, ${detail.clientY}px) scale(1, 1)`;
 
-        }, 100)
+        // }, 100)
     });
 }
 skweCircle();
@@ -54,11 +52,13 @@ skweCircle();
 
 
 document.querySelectorAll('.elem').forEach(function (elem) {
-    elem.addEventListener('mousemove', function () {
+    elem.addEventListener('mousemove', function (detls) {
         gsap.to(elem.querySelector("img"), {
             opacity: 1,
             ease: Power2.out,
-            duration: 0.3
+            duration: 0.3,
+            x: detls.clientX - elem.getBoundingClientRect().left - image.width / 2,
+            y: detls.clientY - elem.getBoundingClientRect().top - image.height / 2,
         });
     });
 
