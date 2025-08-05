@@ -185,6 +185,7 @@ body {
     z-index: 999999;
     position: absolute;
     height: 140%;
+    /* transition: all cubic-bezier(0.15, 1.5, 0.20, 1) 1s; */
 }
 
 .mainMarq {

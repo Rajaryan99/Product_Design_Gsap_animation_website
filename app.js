@@ -52,22 +52,29 @@ skweCircle();
 
 
 document.querySelectorAll('.elem').forEach(function (elem) {
+
+    let rotate = 0;
+    let diffroot = 0;
     elem.addEventListener('mousemove', function (detls) {
+        let topDiff = detls.clientY - elem.getBoundingClientRect().top;
+        // let leftDiff = detls.clientX - elem.getBoundingClientRect().left;
+        diffroot = detls.clientY - rotate;
+        rotate = detls.clientX;
         gsap.to(elem.querySelector("img"), {
             opacity: 1,
-            ease: Power2.out,
-            duration: 0.3,
-            x: detls.clientX - elem.getBoundingClientRect().left - image.width / 2,
-            y: detls.clientY - elem.getBoundingClientRect().top - image.height / 2,
+            ease: Power1,
+            top: topDiff,
+            left: detls.clientX,
+            rotate: gsap.utils.clamp(-20, 20, diffroot);
+
         });
     });
 
-    // elem.addEventListener('mouseleave', function () {
-    //     gsap.to(image, {
-    //         opacity: 0,
-    //         duration: 0.3
-    //     });
-    // });
+    elem.addEventListener('mouseleave', function () {
+        gsap.to(elem.querySelector('img'), {
+            opacity: 0,
+        });
+    });
 });
 
 
