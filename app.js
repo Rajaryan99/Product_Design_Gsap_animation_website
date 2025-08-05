@@ -65,7 +65,7 @@ document.querySelectorAll('.elem').forEach(function (elem) {
             ease: Power1,
             top: topDiff,
             left: detls.clientX,
-            rotate: gsap.utils.clamp(-20, 20, diffroot);
+            rotate: gsap.utils.clamp(-20, 20, diffroot),
 
         });
     });

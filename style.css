@@ -248,6 +248,13 @@ body {
     border: 1px solid #fff;
     border-radius: 100px;
     font-size: 15px;
+    transition: background-color 0.3s linear;
+}
+
+.abouttext a:hover {
+    background-color: white;
+    color: #000;
+    font-weight: 600;
 }
 
 .about .abouttext h5 {
