@@ -1,6 +1,8 @@
 # 🎨 Product Design GSAP Animation and Locomotive Website
 
 This is a beautifully animated landing page built using **HTML**, **CSS**, **JavaScript**, **GSAP (GreenSock Animation Platform)**, and **Locomotive Scroll**. The project focuses on modern UI/UX principles, creating smooth scrolling and fluid animations for an engaging user experience.
+### Link of the website
+## https://product-desig-gsap.netlify.app/
 
 ---
 
